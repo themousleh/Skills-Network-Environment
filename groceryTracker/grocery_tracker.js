@@ -10,6 +10,6 @@ function calculateTotalAmount(){
 
     let totalamount= groery1+groery2+groery3;
 
-    document.getElementById("result").innerText= `The area of the rectangle is: ${area}`;
+    document.getElementById('result').innerText= `The total amount is:$ ${totalamount}`;
 
 }
