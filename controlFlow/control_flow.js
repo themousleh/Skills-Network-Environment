@@ -1,9 +1,9 @@
-let userRole = "admin";
+let userRole = "Employee";
 let accessLevel;
 
-if (userRole === "admin") {
+if (userRole === "Enrolled Member") {
     accessLevel = "Full access granted";
-} else if (userRole === "manager") {
+} else if (userRole === "Employee") {
     accessLevel = "Limited access granted";
 } else {
     accessLevel = "No access granted";
@@ -15,33 +15,13 @@ console.log("Access Level:", accessLevel);
 let isLoggedIn = true;
 let userMessage;
 if (isLoggedIn) {
-    if (userRole === "admin") {
-        userMessage = "Welcome, Admin!";
-    } else {
-        userMessage = "Welcome, User!";
+    if (userRole === "Enrolled member") {
+        userMessage = "Dietary services and one-on-one interaction with dietician";
+    } else if(userRole == "Employee") {
+        userMessage = "Dietary services";
     }
-} else {
-    userMessage = "Please log in to access the system.";
-}
-console.log("User Message:", userMessage);
-
-let userType = "admin";
-let userCategory;
-switch (userType) {
-    case "admin":
-        userCategory = "Administrator";
-        break;
-    case "manager":
-        userCategory = "Manager";
-        break;
-    case "subscriber":
-        userCategory = "Subscriber";
-        break;
-    default:
-        userCategory = "Unknown";
-}
-console.log("User Category:", userCategory);
-
-let isAuthenticated = true;
-let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
-console.log("Authentication Status:", authenticationStatus);
+    else if (userRole== Subscriber){
+    userMessage = "Partial access to facilitate Dietary Services only";
+}}
+else {"You Need to enroll or at least subscribe first to avail this facility"}
+console.log("Package: ", userMessage);
