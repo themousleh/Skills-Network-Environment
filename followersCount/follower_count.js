@@ -16,8 +16,8 @@ function displayCount() {
     }
     
     function reset(){
-        if (count>0){
-        count = 0;}
-        document.getElementById(countDisplay).innerHTML=count;
+        
+        count = 0;
+        document.getElementById('countDisplay').innerHTML=count;
         alert("The Followers count has been reset")
     }
