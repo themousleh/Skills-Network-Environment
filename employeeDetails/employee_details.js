@@ -34,7 +34,15 @@ function displayHREmployees() {
 //     }
 //     document.getElementById('salaries').style.display = 'none'; // Make sure salaries are visible
 // }
-
+function findEmployeeById(employeeId) {
+    const foundEmployee = employees.find(employee => employee.id === employeeId);
+    if (foundEmployee) {
+        document.getElementById('employeesDetails').innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary} - ${foundEmployee.specialization}</p>`;
+    } else {
+        document.getElementById('employeesDetails').innerHTML = 'No employee has been found with this ID';
+    }
+    document.getElementById('salaries').style.display = 'none'; // Make sure salaries are visible
+}
 // function findspecializationBySpecial(employeeSpecial){
 //     const foundEmployee = employees.find(employee => employee.specialization === employeeSpecial);
 //     if (foundEmployee) {
@@ -45,17 +53,6 @@ function displayHREmployees() {
 //     document.getElementById('salaries').style.display = 'none'; // Make sure salaries are visible
 
 // }
-
-function findEmployeeById(employeeId) {
-    const foundEmployee = employees.find(employee => employee.id === employeeId);
-    if (foundEmployee) {
-        document.getElementById('employeesDetails').innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary} - ${foundEmployee.specialization}</p>`;
-    } else {
-        document.getElementById('employeesDetails').innerHTML = 'No employee has been found with this ID';
-    }
-    document.getElementById('salaries').style.display = 'none'; // Make sure salaries are visible
-}
-
 function findspecializationBySpecial(employeeSpecial) {
     const foundEmployee = employees.find(employee => employee.specialization === employeeSpecial);
     if (foundEmployee) {
